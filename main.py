@@ -24,9 +24,9 @@ PX_SCALE = 60
 WINDOW_SIZE = (1280, 720)
 BG_COLOR = (0x30, 0x30, 0x30)
 TEXT_COLOR = (0xee, 0xee, 0xee)
-FONT = None
 CUBE_BORDER_COLOR = (0, 0, 0)
 CUBE_BORDER_THICKNESS = 2
+FPS = 20
 
 
 @dataclass(slots=True, frozen=True)
@@ -96,11 +96,43 @@ def render_case(surface: pygame.Surface, case: PLLCase, origin: tuple[float, flo
 def main():
     cases = PLLCase.load_all_from_file('cases.txt')
     pygame.init()
+    FONT_BIG = pygame.font.SysFont(None, 60)
+    FONT_SMALL = pygame.font.SysFont(None, 36)
+    pygame.display.set_caption('PLL Trainer')
     canvas = pygame.display.set_mode(WINDOW_SIZE)
+    clock = pygame.time.Clock()
+
+    current_case = random.choice(cases)
+    solution_shown = False
     canvas.fill(BG_COLOR)
-    render_case(canvas, random.choice(cases), (WINDOW_SIZE[0]/2, WINDOW_SIZE[1]/2))
-    pygame.display.update()
-    time.sleep(100000)
+    obj = FONT_SMALL.render('Press SPACE to cycle', True, TEXT_COLOR)
+    canvas.blit(obj, (10, 10))
+    render_case(canvas, current_case, (WINDOW_SIZE[0]/2, WINDOW_SIZE[1]*0.6))
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                return
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    return
+                elif event.key == pygame.K_SPACE:
+                    if solution_shown:
+                        # Next case
+                        current_case = random.choice(cases)
+                        solution_shown = False
+                        canvas.fill(BG_COLOR)
+                        render_case(canvas, current_case, (WINDOW_SIZE[0]/2, WINDOW_SIZE[1]*0.6))
+                    else:
+                        # Show solution
+                        solution_shown = True
+                        obj1 = FONT_BIG.render(current_case.name, True, TEXT_COLOR)
+                        obj2 = FONT_SMALL.render(current_case.name_long, True, TEXT_COLOR)
+                        canvas.blit(obj1, (WINDOW_SIZE[0]/2 - obj1.get_width()/2, WINDOW_SIZE[1]*0.05))
+                        canvas.blit(obj2, (WINDOW_SIZE[0]/2 - obj2.get_width()/2, WINDOW_SIZE[1]*0.15))
+        pygame.display.update()
+        clock.tick(FPS)
 
 
 if __name__ == '__main__':
