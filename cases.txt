@@ -1,0 +1,11 @@
+# Lines that start with a "#" symbol are ignored.
+# Format is short name / long name / sticker sticker sticker sticker sticker sticker
+#  Where `sticker` should be B, O, G, or R. You do not need to put all 4 combinations of colors; one is sufficient.
+#  Then put the 6 stickers you see in order from left to right.
+# You do have to have all 4 angles you can see the PLL from. This is so you can selectively choose to see/not see some.
+
+
+A / Aa outer block / GGBROG
+A / Aa headlights only / ROGOBO
+A / Aa headlights and block / OBOBRR
+A / Aa thick block / BRRGGB
