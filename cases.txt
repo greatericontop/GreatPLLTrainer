@@ -9,3 +9,84 @@ A / Aa outer block / GGBROG
 A / Aa headlights only / ROGOBO
 A / Aa headlights and block / OBOBRR
 A / Aa thick block / BRRGGB
+A / Ab headlights and block / GGOBOB
+A / Ab headlights only / BOBRBG
+A / Ab outer block / RBGORR
+A / Ab thick block / ORRGGO
+
+F / F nothing / GBOBOG
+F / F nothing / BOGOGB
+F / F full side / OGBRRR
+F / F full side / RRRGBO
+
+G / Ga inner block / GOOBRG
+G / Ga nothing / BRGOGB
+G / Ga headlights only / OGBRBR
+G / Ga headlights and block / RBRGOO
+G / Gb outer block / GBOBGG
+G / Gb inner block / BGGORB
+G / Gb headlights only / ORBROR
+G / Gb headlights only / RORGBO
+G / Gc nothing / GBOBRG
+G / Gc inner block / BRGOOB
+G / Gc headlights and block / OOBRGR
+G / Gc headlights only / RGRGBO
+G / Gd inner block / GROBBG
+G / Gd outer block / BBGOGB
+G / Gd headlights only / OGBROR
+G / Gd headlights only / RORGRO
+
+J / Jb double block (adj) / GOOBGG
+J / Jb double block (opp) / BGGOBB
+J / Jb full side / OBBRRR
+J / Jb full side / RRRGOO
+J / Ja full side / RRGOOO
+J / Ja full side / OOOBBR
+J / Ja double block (opp) / BBRGGB
+J / Ja double block (adj) / GGBRRG
+
+R / Ra outer block / GGOBOG
+R / Ra nothing / BOGORB
+R / Ra headlights (checkerboard) / ORBRBR
+R / Ra headlights and block / RBRGGO
+R / Rb headlights (checkerboard) / GOGOGB
+R / Rb nothing / OGBRBO
+R / Rb outer block / RBOBRR
+R / Rb headlights and block / BRRGOG
+
+T / T outer block / GGOBRG
+T / T outer block / BRGOBB
+T / T headlights and block / OBBROR
+T / T headlights and block / RORGGO
+
+E / E (aligned) / RGOBOG
+E / E (unaligned) / BOGOBR
+
+N / Na / BGGORR
+N / Nb / GGBRRO
+
+V / V outer block / GGBRBO
+V / V inner checker / RBOBOG
+V / V outer block / BOGORR
+V / V thick block / ORRGGB
+
+Y / Y double block / GGBROO
+Y / Y inner block / ROOBRG
+Y / Y outer checker / BRGOBR
+Y / Y inner block / OBRGGB
+
+H / H / GBGORO
+
+U / Ua / GOGORO
+U / Ua / OROBBB
+U / Ua / BBBRGR
+U / Ua hard / RGRGOG
+U / Ub hard / GRGOGO
+U / Ub / OGOBBB
+U / Ub / BBBROR
+U / Ub / RORGRG
+
+Z / Z / GOGOGO
+Z / Z / OGOBRB
+
+* / PLL skip lol / GGGOOO

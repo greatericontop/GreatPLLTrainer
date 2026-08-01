@@ -98,7 +98,7 @@ def main():
     pygame.init()
     FONT_BIG = pygame.font.SysFont(None, 60)
     FONT_SMALL = pygame.font.SysFont(None, 36)
-    pygame.display.set_caption('PLL Trainer')
+    pygame.display.set_caption('GreatPLLTrainer')
     canvas = pygame.display.set_mode(WINDOW_SIZE)
     clock = pygame.time.Clock()
 
